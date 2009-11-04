@@ -1,0 +1,36 @@
+Changelog
+_________________________________
+Oct 27, 2009 - v 1.4
+
+-added IP Gre tunnel module:
+
+This particular tunneling driver implements
+GRE (Generic Routing Encapsulation) and at this time allows
+encapsulating of IPv4 or IPv6 over existing IPv4 infrastructure.
+This driver is useful if the other endpoint is a Cisco router: Cisco
+likes GRE much better.
+
+
+
+
+-Added cifs module
+
+This gives ability to mount Samba/Windows shares directly 
+For example:
+mount -t cifs //ServerIP/shareName -o credentials=/some_path/sambacred.txt,rw,auto,user,uid=1000,iocharset=utf8,file_mode=0770,dir_mode=0770 
+
+you can store your credentials in a file you create (in the example: /some_path/sambacred.txt)
+
+This file needs to have following format:
+username=your_user_name
+password=your_password
+
+
+
+
+-Added some bluetooth features (BNEP multicats filter and protocol filter) in case it is needed by future Bluetooth tools contributed by the community
+
+
+-Removed all kernel debugging code not needed when we use this kernel on a phone and we don't want to debug. Might slightly decrese overhead and make things a bit faster. Be aware that in case you have issues, it will be harder to debug, but again who is going to read stack traces, debug outputs etc... apart from a kernel hacker.
+
+
