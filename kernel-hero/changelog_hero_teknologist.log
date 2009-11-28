@@ -1,6 +1,16 @@
 Changelog -latest version online here: http://android.teknologism.org/changelog/
 _________________________________
 
+Nov 28, 2009 - Version 1.9
+Fixes for Wifi Tether for root users issues (reboots, wifi unavailable after tether etc.)
+-added some debug options previously removed
+-switched back to Anticiparoty I/O scheduler
+Moved compache modules from /system/lib/modules/compcache to /system/lib/modules
+Added a symlink from /system/lib/modules to /system/lib/modules/2.6.27-mck-teknologist-1.9 for modutils to work perfectly (modprobe/rmmod etc.)
+Increased compcache?s ramzswap from 80Mb to 92Mb
+Performance is still as great as before
+
+
 Nov 3, 2009 - Version 1.8 (Integrated into MCR 2.9):
 
 OpenVPN kernel module tun.ko is now automatically inserted at boot time
